@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import { Route, Router, Routes } from "react-router-dom";
+import routes from "./config/routes";
+import ProtectedRoute from "./component/ProtectedRoute";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          {routes.map((route, idx) => (
+            <Route
+              key={idx}
+              path={route.path}
+              element={
+                route.protected ? (
+                  <ProtectedRoute activeRoles={route.roles}>
+                    {route.layout}
+                  </ProtectedRoute>
+                ) : (
+                  route.layout
+                )
+              }
+            >
+              {route.index && <Route index element={route.index} />}
+              {route.children.map((child, cidx) => (
+                <Route key={cidx} path={child.path} element={child.element} />
+              ))}
+            </Route>
+          ))}
+        </Routes>
+      </Suspense>
     </div>
   );
-}
+};
 
 export default App;

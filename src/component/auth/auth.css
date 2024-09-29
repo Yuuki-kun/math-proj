@@ -1,0 +1,12 @@
+.auth-form-cont {
+    padding: 1rem;
+
+
+    background-color: #465474 !important;
+    background-color: #f6f8fa !important;
+    border-radius: 10px;
+    border: 1px solid #bbbbbb;
+    z-index: 1;
+    width: auto;
+    max-width: 100%;
+}
