@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/math-proj/static/css/main.ae0dc825.css",
+    "main.css": "/math-proj/static/css/main.7e0da99d.css",
     "main.js": "/math-proj/static/js/main.d713eaae.js",
     "static/js/254.28550856.chunk.js": "/math-proj/static/js/254.28550856.chunk.js",
     "static/css/410.f8f42c68.chunk.css": "/math-proj/static/css/410.f8f42c68.chunk.css",
@@ -8,7 +8,7 @@
     "static/js/453.69c6447e.chunk.js": "/math-proj/static/js/453.69c6447e.chunk.js",
     "static/js/808.18951b97.chunk.js": "/math-proj/static/js/808.18951b97.chunk.js",
     "index.html": "/math-proj/index.html",
-    "main.ae0dc825.css.map": "/math-proj/static/css/main.ae0dc825.css.map",
+    "main.7e0da99d.css.map": "/math-proj/static/css/main.7e0da99d.css.map",
     "main.d713eaae.js.map": "/math-proj/static/js/main.d713eaae.js.map",
     "254.28550856.chunk.js.map": "/math-proj/static/js/254.28550856.chunk.js.map",
     "410.f8f42c68.chunk.css.map": "/math-proj/static/css/410.f8f42c68.chunk.css.map",
@@ -17,7 +17,7 @@
     "808.18951b97.chunk.js.map": "/math-proj/static/js/808.18951b97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae0dc825.css",
+    "static/css/main.7e0da99d.css",
     "static/js/main.d713eaae.js"
   ]
 }
