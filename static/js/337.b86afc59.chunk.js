@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmath_app=self.webpackChunkmath_app||[]).push([[337],{9337:(s,a,e)=>{e.r(a),e.d(a,{default:()=>j});e(5043);var c=e(9160),h=e(579);const j=()=>(0,h.jsxs)("div",{className:"user-home-container",children:[(0,h.jsx)(c.A,{}),(0,h.jsx)(c.A,{}),(0,h.jsx)(c.A,{}),(0,h.jsx)(c.A,{}),(0,h.jsx)(c.A,{}),(0,h.jsx)(c.A,{})]})}}]);
+//# sourceMappingURL=337.b86afc59.chunk.js.map
