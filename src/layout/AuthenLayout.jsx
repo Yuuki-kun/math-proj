@@ -50,7 +50,7 @@ const AuthenLayout = () => {
     <div
       ref={bgRef}
       id="auth-bg-id"
-      className="w-100 h-100 p-4 d-flex align-items-center flex-column auth-bg"
+      className="w-100 h-100 p-4 d-flex align-items-center justify-content-center flex-column auth-bg"
     >
       <Outlet />
     </div>

@@ -1,0 +1,21 @@
+.user-layout-container {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.user-layout-main-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    overflow: auto;
+    height: 100%;
+}

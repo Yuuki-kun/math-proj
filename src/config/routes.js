@@ -1,10 +1,10 @@
 import React from "react";
-import CommonUserLayout from "../layout/CommonUserLayout";
+import CommonUserLayout from "../layout/user/CommonUserLayout";
 import AuthenLayout from "../layout/AuthenLayout";
 
 const Login = React.lazy(() => import("../component/auth/Login"));
 const Registration = React.lazy(() => import("../component/auth/Registration"));
-
+const UserHome = React.lazy(() => import("../pages/user-home/UserHome"));
 const routes = [
   {
     path: "/",
@@ -12,7 +12,11 @@ const routes = [
     children: [
       {
         path: "/",
-        element: <h1>Home Page</h1>,
+        element: <UserHome />,
+      },
+      {
+        path: "/home",
+        element: <UserHome />,
       },
     ],
   },

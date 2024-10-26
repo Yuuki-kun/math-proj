@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AccountTypeEnum, defaultAccountType } from "../../model/AccountType";
-import { SmileOutlined } from "@ant-design/icons";
+import { CheckCircleFilled, SmileOutlined } from "@ant-design/icons";
 import {
   Button,
   Cascader,
@@ -14,6 +14,8 @@ import {
   TreeSelect,
 } from "antd";
 import "./auth.css";
+import { RegistrationService } from "../api/registerService";
+import useAuth from "../../hook/useAuth";
 const formItemLayout = {
   labelCol: {
     xs: {
@@ -33,6 +35,8 @@ const formItemLayout = {
   },
 };
 const Registration = () => {
+  const { setAuth } = useAuth();
+  const [responseError, setResponseError] = useState(null);
   const [accountType, setAccountType] = useState(defaultAccountType);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -119,7 +123,7 @@ const Registration = () => {
     console.log("Errors:", errors);
   }, [errors]);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // e.preventDefault();
     const finalErrors = {};
 
@@ -137,10 +141,36 @@ const Registration = () => {
       console.log(formData);
 
       setIsSubmitting(true);
-      setTimeout(() => {
+      // setTimeout(() => {
+      //   setIsSubmitting(false);
+      //   alert("Registration successful");
+      // }, 2000);
+
+      try {
+        // console.log(process.env.REACT_APP_BE_API_URL);
+        const user = {
+          email: formData.email,
+          password: formData.password,
+        };
+        console.log(user);
+        const registerResponse = await RegistrationService(user);
+
+        setAuth({
+          email: registerResponse.email,
+          roles: registerResponse.roles,
+          accessToken: registerResponse.accessToken,
+          userId: registerResponse.userId,
+        });
+
         setIsSubmitting(false);
-        alert("Registration successful");
-      }, 2000);
+        console.log(registerResponse);
+      } catch (error) {
+        console.error(error);
+        setIsSubmitting(false);
+        if (error.status >= 400 && error.status <= 500) {
+          setResponseError(error.response.data.details);
+        }
+      }
     }
   };
 
@@ -149,9 +179,15 @@ const Registration = () => {
       <div style={{ width: "30%", marginBottom: "10px" }}>
         <img
           className="img-fluid"
-          src="/assets/images/Logo-test.png"
+          src="assets/images/Logo-test.png"
           alt="Logo"
         />
+      </div>
+      <div
+        className="mt-2 text-danger fs-6 fw-bold text-center"
+        // style={{ maxWidth: "250px" }}
+      >
+        <p>{responseError}</p>
       </div>
       <Form
         {...formItemLayout}
@@ -168,8 +204,9 @@ const Registration = () => {
         spellCheck="false"
         size="large"
         onFinish={handleSubmit}
+        disabled={isSubmitting}
       >
-        <Form.Item
+        {/* <Form.Item
           label="Full Name"
           validateStatus={
             errors.fullName && errors.fullName !== "" ? "error" : "success"
@@ -184,6 +221,19 @@ const Registration = () => {
             onBlur={handleBlur}
             // id="error"
           />
+        </Form.Item> */}
+        <Form.Item
+          name="fullName"
+          label="Full Name"
+          validateStatus={errors.fullName ? "error" : undefined}
+          help={errors.fullName || " "} // Thay vì chuỗi rỗng, dùng khoảng trắng
+        >
+          <Input
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
         </Form.Item>
 
         <Form.Item
@@ -192,7 +242,6 @@ const Registration = () => {
             errors.email && errors.email !== "" ? "error" : "success"
           }
           help={errors.email ? errors.email : ""}
-          hasFeedback={errors.email || errors.email === ""}
           // autoComplete="newpassword"
         >
           <Input
@@ -200,7 +249,7 @@ const Registration = () => {
             value={formData.email}
             onChange={handleChange}
             onBlur={handleBlur}
-            // autoComplete="newpassword"
+            autoComplete="username"
           />
         </Form.Item>
 
@@ -210,7 +259,6 @@ const Registration = () => {
             errors.password && errors.password !== "" ? "error" : "success"
           }
           help={errors.password ? errors.password : ""}
-          hasFeedback={errors.password || errors.password === ""}
         >
           <Input.Password
             name="password"
@@ -229,13 +277,13 @@ const Registration = () => {
               : "success"
           }
           help={errors.matchPassword ? errors.matchPassword : ""}
-          hasFeedback={errors.matchPassword || errors.matchPassword === ""}
         >
           <Input.Password
             name="matchPassword"
             value={formData.matchPassword}
             onChange={handleChange}
             onBlur={handleBlur}
+            autoComplete="new-password"
           />
         </Form.Item>
         <Form.Item
@@ -262,7 +310,7 @@ const Registration = () => {
           <Button
             type="primary"
             htmlType="submit"
-            loading={true}
+            loading={isSubmitting}
             iconPosition="end"
             style={{ width: "100%" }}
           >
