@@ -1,31 +1,29 @@
 {
   "files": {
-    "main.css": "/math-proj/static/css/main.e74877e9.css",
-    "main.js": "/math-proj/static/js/main.8487e3a1.js",
+    "main.css": "/math-proj/static/css/main.34af7158.css",
+    "main.js": "/math-proj/static/js/main.ed5061e1.js",
     "static/css/288.83da0d80.chunk.css": "/math-proj/static/css/288.83da0d80.chunk.css",
-    "static/js/288.0e2fbbef.chunk.js": "/math-proj/static/js/288.0e2fbbef.chunk.js",
+    "static/js/288.39b8683c.chunk.js": "/math-proj/static/js/288.39b8683c.chunk.js",
     "static/css/557.83da0d80.chunk.css": "/math-proj/static/css/557.83da0d80.chunk.css",
-    "static/js/557.737d1671.chunk.js": "/math-proj/static/js/557.737d1671.chunk.js",
-    "static/css/337.9516feba.chunk.css": "/math-proj/static/css/337.9516feba.chunk.css",
-    "static/js/337.b86afc59.chunk.js": "/math-proj/static/js/337.b86afc59.chunk.js",
-    "static/js/453.69c6447e.chunk.js": "/math-proj/static/js/453.69c6447e.chunk.js",
-    "static/js/126.e2438669.chunk.js": "/math-proj/static/js/126.e2438669.chunk.js",
-    "static/js/162.f86db2ad.chunk.js": "/math-proj/static/js/162.f86db2ad.chunk.js",
+    "static/js/557.21133bc2.chunk.js": "/math-proj/static/js/557.21133bc2.chunk.js",
+    "static/css/424.7a98aa1c.chunk.css": "/math-proj/static/css/424.7a98aa1c.chunk.css",
+    "static/js/424.ca4b7b28.chunk.js": "/math-proj/static/js/424.ca4b7b28.chunk.js",
+    "static/js/0.4feba25b.chunk.js": "/math-proj/static/js/0.4feba25b.chunk.js",
+    "static/js/852.7a6bcd4e.chunk.js": "/math-proj/static/js/852.7a6bcd4e.chunk.js",
     "index.html": "/math-proj/index.html",
-    "main.e74877e9.css.map": "/math-proj/static/css/main.e74877e9.css.map",
-    "main.8487e3a1.js.map": "/math-proj/static/js/main.8487e3a1.js.map",
+    "main.34af7158.css.map": "/math-proj/static/css/main.34af7158.css.map",
+    "main.ed5061e1.js.map": "/math-proj/static/js/main.ed5061e1.js.map",
     "288.83da0d80.chunk.css.map": "/math-proj/static/css/288.83da0d80.chunk.css.map",
-    "288.0e2fbbef.chunk.js.map": "/math-proj/static/js/288.0e2fbbef.chunk.js.map",
+    "288.39b8683c.chunk.js.map": "/math-proj/static/js/288.39b8683c.chunk.js.map",
     "557.83da0d80.chunk.css.map": "/math-proj/static/css/557.83da0d80.chunk.css.map",
-    "557.737d1671.chunk.js.map": "/math-proj/static/js/557.737d1671.chunk.js.map",
-    "337.9516feba.chunk.css.map": "/math-proj/static/css/337.9516feba.chunk.css.map",
-    "337.b86afc59.chunk.js.map": "/math-proj/static/js/337.b86afc59.chunk.js.map",
-    "453.69c6447e.chunk.js.map": "/math-proj/static/js/453.69c6447e.chunk.js.map",
-    "126.e2438669.chunk.js.map": "/math-proj/static/js/126.e2438669.chunk.js.map",
-    "162.f86db2ad.chunk.js.map": "/math-proj/static/js/162.f86db2ad.chunk.js.map"
+    "557.21133bc2.chunk.js.map": "/math-proj/static/js/557.21133bc2.chunk.js.map",
+    "424.7a98aa1c.chunk.css.map": "/math-proj/static/css/424.7a98aa1c.chunk.css.map",
+    "424.ca4b7b28.chunk.js.map": "/math-proj/static/js/424.ca4b7b28.chunk.js.map",
+    "0.4feba25b.chunk.js.map": "/math-proj/static/js/0.4feba25b.chunk.js.map",
+    "852.7a6bcd4e.chunk.js.map": "/math-proj/static/js/852.7a6bcd4e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e74877e9.css",
-    "static/js/main.8487e3a1.js"
+    "static/css/main.34af7158.css",
+    "static/js/main.ed5061e1.js"
   ]
 }
