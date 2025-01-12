@@ -1,18 +1,22 @@
 import React from "react";
 import useAuth from "./useAuth";
 import { useLocation, useNavigate } from "react-router-dom";
+import axios from "../config/axios/axios";
+import { ApiUrl } from "../config/apiUrl";
 
 const useRefreshToken = () => {
   const { setAuth } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
+  console.log("refresh token = " + localStorage.getItem("refreshToken"));
+
   const refresh = async () => {
     console.log("refresh token = " + localStorage.getItem("refreshToken"));
     try {
-      const response = await axios.get(REFRESH_TOKEN_URL, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("refreshToken")}`,
-        },
+      console.log("post to " + ApiUrl.auth.refreshToken);
+
+      const response = await axios.post(ApiUrl.auth.refreshToken, {
+        withCredentials: true,
       });
 
       setAuth((prev) => {

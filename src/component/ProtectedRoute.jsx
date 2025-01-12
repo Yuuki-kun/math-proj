@@ -1,9 +1,11 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
+import useAuth from "../hook/useAuth";
 
 const ProtectedRoute = ({ children, activeRoles }) => {
-  const fakeUserRoles = [];
-  const hasAccess = fakeUserRoles.some((role) => activeRoles.includes(role));
+  const { auth } = useAuth();
+  const roles = auth?.roles ? auth.roles : [];
+  const hasAccess = roles.some((role) => activeRoles.includes(role));
   return hasAccess ? children : <Navigate to="/authentication/login" replace />;
 };
 

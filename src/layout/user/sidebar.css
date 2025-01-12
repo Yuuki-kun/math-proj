@@ -7,10 +7,14 @@
     position: relative;
     padding: 15px 20px 0 0px;
     transition: all 0.2s ease;
+    width: 0px;
+    padding: 0px;
 }
 
 .sidebar-container.sidebar-activated {
     width: 300px;
+    padding: 15px 20px 0 0px;
+
 }
 
 .sidebar-items-container {
@@ -54,6 +58,7 @@
     /* font-size: 20px; */
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 
 .sidebar-content {

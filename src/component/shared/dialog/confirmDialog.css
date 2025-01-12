@@ -1,0 +1,12 @@
+.notification-sender-name {
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 14px;
+    color: blue;
+    cursor: pointer;
+}
+
+.notification-sender-name:hover {
+    color: blue;
+    text-decoration: underline;
+}

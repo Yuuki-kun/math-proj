@@ -1,0 +1,35 @@
+.question-sheet-list {
+    padding: 16px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.question-selection-item {
+    width: 40px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #0b5db5;
+    position: relative;
+}
+
+.question-selection-item.selected {
+    background-color: #0b5db5;
+    color: white;
+}
+
+.q-flagged {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 10px;
+    width: 10px;
+}

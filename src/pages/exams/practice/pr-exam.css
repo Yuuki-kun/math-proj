@@ -1,0 +1,50 @@
+.practice-exam-container {
+    background-color: #ecf1f5;
+    height: auto;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 100px;
+
+}
+
+.pr-exam-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.pr-exam-content-time-container {
+    display: flex;
+    /* grid-template-columns: 4fr 1fr; */
+    padding: 0 10px;
+    height: auto;
+    align-items: flex-start;
+}
+
+.pr-exam-area {
+    background-color: white;
+    /* min-height: 100px; */
+    border: 1px solid #cecece;
+    border-radius: 8px;
+}
+
+.pr-exam-content-container {
+    padding: 16px;
+    width: 82.5%;
+}
+
+.pr-exam-time-control {
+    background-color: #f8f9fa;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 10px;
+    max-height: 89vh;
+    overflow: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+}

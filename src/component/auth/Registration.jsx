@@ -16,6 +16,7 @@ import {
 import "./auth.css";
 import { RegistrationService } from "../api/registerService";
 import useAuth from "../../hook/useAuth";
+import { useNavigate } from "react-router-dom";
 const formItemLayout = {
   labelCol: {
     xs: {
@@ -43,7 +44,7 @@ const Registration = () => {
     email: "",
     password: "",
     matchPassword: "",
-    accountType: accountType,
+    role: accountType,
   });
 
   const [errors, setErrors] = useState({});
@@ -123,6 +124,8 @@ const Registration = () => {
     console.log("Errors:", errors);
   }, [errors]);
 
+  const navigate = useNavigate();
+
   const handleSubmit = async () => {
     // e.preventDefault();
     const finalErrors = {};
@@ -151,6 +154,8 @@ const Registration = () => {
         const user = {
           email: formData.email,
           password: formData.password,
+          fullName: formData.fullName,
+          role: formData.role,
         };
         console.log(user);
         const registerResponse = await RegistrationService(user);
@@ -160,9 +165,13 @@ const Registration = () => {
           roles: registerResponse.roles,
           accessToken: registerResponse.accessToken,
           userId: registerResponse.userId,
+          memberId: registerResponse.memberId,
         });
 
         setIsSubmitting(false);
+
+        navigate("/home");
+
         console.log(registerResponse);
       } catch (error) {
         console.error(error);
@@ -297,7 +306,11 @@ const Registration = () => {
           <Select
             defaultValue={accountType}
             style={{ width: "100%" }}
-            onChange={(value) => setAccountType(value)}
+            onChange={(value) => {
+              setAccountType(value);
+              setFormData((prevData) => ({ ...prevData, role: value }));
+            }}
+            value={accountType}
           >
             {Object.values(AccountTypeEnum).map((account) => (
               <Select.Option key={account} value={account}>

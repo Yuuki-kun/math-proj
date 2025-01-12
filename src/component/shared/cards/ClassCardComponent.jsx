@@ -1,6 +1,9 @@
 import React from "react";
 import "./classCard.css";
-const ClassCardComponent = () => {
+import { Link } from "react-router-dom";
+const ClassCardComponent = ({ data }) => {
+  console.log(data);
+
   return (
     // <div
     //   className="d-grid align-items-between"
@@ -9,15 +12,17 @@ const ClassCardComponent = () => {
     //     gap: "10px",
     //   }}
     // >
-    <div className="class-card-container">
+    <div className="class-card-container card-enter">
       <div className="class-image">
         <img
-          src="https://scontent.fvca1-4.fna.fbcdn.net/v/t39.30808-6/454005381_799465345693291_6559741550055714940_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=OgFajjB-QBgQ7kNvgHG0816&_nc_zt=23&_nc_ht=scontent.fvca1-4.fna&_nc_gid=A4IEs0Jzo6hq8HamXslecaq&oh=00_AYAXIYv40F0KwkXNKSPmp1tBQhj5ZK8fW9MYTXgf16DOzA&oe=671C0F15"
-          alt=""
-          className="img-fluid"
+          src={data?.imageUrl || ""}
+          alt="class-image"
+          className="img-fluid img-class-avt"
         />
       </div>
-      <div className="mt-5 fw-bold">Toán 11A</div>
+      <Link to={`/class/${data?.id}`} className="text-center">
+        <div className="fw-bold">{data?.className}</div>
+      </Link>
     </div>
     // </div>
   );

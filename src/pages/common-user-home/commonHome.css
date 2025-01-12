@@ -1,0 +1,29 @@
+.home-container {
+
+    width: 100%;
+    padding: 16px 24px;
+}
+
+.home-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+
+}
+
+.home-content {
+    position: relative;
+    margin-top: 24px;
+    transition: all .5s ease;
+}
+
+.add-class-shortcut {
+    border-radius: 4px;
+    background-color: rgb(216, 216, 246);
+    padding: 1px 4px;
+    color: rgb(71, 71, 233);
+    font-weight: 700;
+}

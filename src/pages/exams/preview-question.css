@@ -1,0 +1,341 @@
+.preview-questions-container {
+    /* box shadow as a paper  */
+    /* box-shadow: 0 15px 35px 0 rgba(65, 69, 82, .08), 0 5px 15px 0 rgba(0, 0, 0, .12); */
+    /* padding: 24px; */
+    /* padding-bottom: 100px; */
+
+}
+
+.question {
+    padding: 16px 24px;
+    /* border: 1px solid #caced5; */
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    transition: box-shadow 0.2s ease-in-out;
+    font-size: 1.1rem;
+}
+
+@keyframes pulseShadow {
+    0% {
+        box-shadow: rgba(0, 0, 255, 0.05) 0px 1px 2px, rgba(0, 0, 255, 0.1) 0px 0px 3px 1px;
+
+    }
+
+    50% {
+        box-shadow: rgba(0, 0, 255, 0.1) 0px 2px 4px -1px, rgba(0, 0, 255, 0.15) 0px 0px 6px 2px;
+    }
+
+    100% {
+        box-shadow: rgba(0, 0, 255, 0.2) 0px 3px 5px -1px, rgba(0, 0, 255, 0.25) 0px 0px 8px 3px;
+    }
+}
+
+.selectedQ {
+    /* background-color: #f7f7f7; */
+    /* animation: pulseShadow 1.4s infinite; */
+    box-shadow: rgba(0, 0, 255, 0.35) 0px 4px 8px -2px, rgba(0, 0, 255, 0.12) 0px 0px 0px 1px;
+}
+
+.question-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(12, 12, 207);
+}
+
+.question-title span {
+    margin-right: 10px;
+}
+
+.question-number {
+    font-weight: 700;
+    color: rgb(12, 12, 207);
+}
+
+.question-points {
+    border: none;
+    outline: none;
+    color: rgb(12, 12, 207);
+    width: auto;
+    text-align: center;
+    /* background-color: #d0dce9; */
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.question-points input {
+    border: none;
+    outline: none;
+    color: rgb(12, 12, 207);
+    width: 40px;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.question-level,
+.question-type {
+    margin-left: 5px;
+    font-size: 14px;
+    width: auto;
+
+}
+
+.question-level>select,
+.question-type>select {
+
+    background-color: white;
+    /* Nền trắng */
+    border: 1px solid blue;
+    /* Viền màu xanh */
+    border-radius: 4px;
+    /* Bo góc viền (tuỳ chọn) */
+    padding: 2px;
+    /* Khoảng cách bên trong (tuỳ chọn) */
+    color: black;
+    /* Màu chữ */
+    outline: none;
+    /* Xóa viền mặc định khi focus */
+    width: auto;
+}
+
+.save-changes-btn {
+    color: blue;
+    /* color: white; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: #fff;
+    box-shadow: none;
+
+}
+
+
+
+.question-audio {
+    font-style: italic;
+    color: rgb(12, 12, 207);
+    cursor: pointer;
+}
+
+
+.question-content {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    flex-wrap: wrap;
+    /* Cho phép các phần tử con xuống dòng */
+
+}
+
+.question-content img {
+    height: auto;
+    width: auto;
+    /* margin-left: 5px; */
+    /* margin-right: 5px; */
+}
+
+.answer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.answer-letter {
+    font-weight: 700;
+    color: rgb(12, 12, 207);
+    width: 40px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid #caced5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.answer-letter.correct {
+    /* a warm color */
+    border-color: #d6579f;
+    color: #b0164c;
+    box-shadow: 0 0 4px 0px #b0164c;
+}
+
+math {
+    font-size: 1.2rem;
+    /* color: #0c0ccf; */
+}
+
+
+.exam-title,
+.exam-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-exam-title-btn {
+    color: blue;
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.exam-title>div {
+    cursor: pointer;
+}
+
+.exam-description>div {
+
+    cursor: pointer;
+}
+
+.e-option-item {
+    margin-bottom: 15px;
+
+}
+
+.edit-exam-options-container {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+.edit-exam-options-container.open {
+    height: auto;
+    opacity: 1;
+}
+
+.exam-setting-icon {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+
+}
+
+.exam-setting-icon.open {
+    transform: rotate(90deg);
+}
+
+.save-exam-options-btn {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border: none;
+    padding: 0 10px;
+    gap: 5px;
+    background-color: white;
+    color: blue;
+    border-radius: 4px;
+    border: 1px solid blue;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+.save-exam-options-btn:hover {
+    background-color: blue;
+    color: white;
+}
+
+.answer-letter.disabled {
+    background-color: #e1e1e1;
+    color: #333;
+    cursor: not-allowed;
+}
+
+.save-changes-btn:disable {
+    background-color: #e1e1e1;
+    color: #333;
+    cursor: not-allowed;
+}
+
+.question-type>select:disable {
+    background-color: #e1e1e1;
+    color: #333;
+    cursor: not-allowed;
+}
+
+.e-o-classes-container {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+    opacity: 0;
+    margin-top: 10px;
+    width: 350px;
+    border: 1px solid #caced5;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: -1;
+    display: none;
+}
+
+.e-o-classes-container.open {
+    height: auto;
+    max-height: 200px;
+    opacity: 1;
+    overflow: auto;
+    z-index: 1;
+    display: block;
+}
+
+.e-o-search {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.e-o-search>button {
+    background-color: #e6f2fd;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all .2s ease;
+    width: 70px;
+
+}
+
+.e-o-search>input {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+
+.e-o-class-item {
+    border-bottom: 1px solid #caced5;
+    color: #505152;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 520;
+    transition: all .2s ease;
+}
+
+.e-o-class-item:hover {
+    background-color: #e6eff9;
+    border-radius: 4px;
+}

@@ -1,0 +1,30 @@
+.exam-list-container {}
+
+.exam-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    /* border-radius: 8px; */
+    /* background-color: #f5f5f5; */
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.exam-view-action-icon {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.exam-view-action-icon.edit-exam-icon:hover {
+    background-color: #c1d2fe;
+}
+
+.exam-view-action-icon.delete-exam-icon:hover {
+    background-color: rgb(229, 197, 197);
+}

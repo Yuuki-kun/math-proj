@@ -22,11 +22,15 @@ const Sidebar = ({ isSidebarOpen }) => {
             isSelected === 1 ? "sidebar-item-selected" : ""
           }`}
         >
-          <Link to={"home"}>
-            <button className="sidebar-button" onClick={() => setIsSelected(1)}>
-              <HomeTwoTone />
-              <span className="sidebar-content">Trang chủ</span>
-            </button>
+          <Link
+            to={"/home"}
+            className="sidebar-button"
+            onClick={() => setIsSelected(1)}
+          >
+            {/* <button className="sidebar-button" onClick={() => setIsSelected(1)}> */}
+            <HomeTwoTone />
+            <span className="sidebar-content">Trang chủ</span>
+            {/* </button> */}
           </Link>
         </div>
         <div
@@ -34,10 +38,16 @@ const Sidebar = ({ isSidebarOpen }) => {
             isSelected === 2 ? "sidebar-item-selected" : ""
           }`}
         >
-          <button className="sidebar-button" onClick={() => setIsSelected(2)}>
+          <Link
+            to={"/exams"}
+            className="sidebar-button"
+            onClick={() => setIsSelected(2)}
+          >
+            {/* <button className="sidebar-button" onClick={() => setIsSelected(2)}> */}
             <FileTextTwoTone />
             <span className="sidebar-content">Bài kiểm tra</span>
-          </button>
+            {/* </button> */}
+          </Link>
         </div>
         <div
           className={`sidebar-item ${

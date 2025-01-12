@@ -1,0 +1,165 @@
+.common-exam-container {
+    width: 100%;
+    padding: 16px 24px;
+    margin-bottom: 1rem;
+    padding-bottom: 100px;
+}
+
+.exam-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.a-add-class-btn {
+    position: relative;
+}
+
+.create-exam-type-selection-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 0;
+    background-color: #fff;
+
+    height: 0;
+    /* overflow: hidden; */
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: transform .25s ease-in-out, opacity .15s ease;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 15px;
+}
+
+.create-exam-type-selection-container.activated {
+    width: 150px;
+    height: 100px;
+    transform: translateY(10px);
+    opacity: 1;
+    z-index: 100;
+}
+
+.create-exam-type-selection-container.negated {
+    width: 0;
+    /* hoặc max-width: 0; */
+    height: 0;
+    /* hoặc max-height: 0; */
+    transform: translateY(-10%);
+    opacity: 0;
+    overflow: hidden;
+}
+
+.create-exam-type-selection-container.activated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    transform: translateY(-50%) rotate(45deg);
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    animation: rotate45deg .25s ease-in-out;
+
+}
+
+.create-exam-type-selection-btn {
+    width: 100%;
+    height: 40px;
+    padding: 4px 10px;
+    text-align: start;
+    border: none;
+    background-color: #fff;
+    transition: background-color .25s ease;
+}
+
+.create-exam-type-selection-btn:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+/* Container chính */
+.begin-soon-exam-container {
+    padding: 16px;
+    background-color: #f6e8e8;
+    /* Màu nền nhẹ nhàng */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); */
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 32px;
+}
+
+/* Tiêu đề chính */
+.begin-soon-exam-container h6 {
+    color: #d9534f;
+    /* Màu đỏ tươi để làm nổi bật */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+/* Danh sách các bài thi */
+.begin-soon-exam-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+/* Thẻ bài thi */
+.begin-soon-exam-item {
+    background-color: #ffffff;
+    /* Màu trắng để nổi bật */
+    border-left: 4px solid #d9534f;
+    /* Viền đỏ bên trái nhấn mạnh tính cấp thiết */
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    /* Hiệu ứng khi hover */
+
+}
+
+.begin-soon-exam-item:hover {
+    transform: translateY(-4px);
+    /* Hiệu ứng nổi khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tiêu đề bài thi */
+.begin-soon-exam-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+/* Ngày giờ bài thi */
+.begin-soon-exam-date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #e74c3c;
+}
+
+.begin-soon-exam-time {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f39c12;
+}

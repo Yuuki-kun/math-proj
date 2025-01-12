@@ -1,7 +1,9 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Route, Router, Routes } from "react-router-dom";
 import routes from "./config/routes";
 import ProtectedRoute from "./component/ProtectedRoute";
+import ActionResultNotification from "./component/shared/notifications/ActionResultNotification";
+import useAuth from "./hook/useAuth";
 
 const App = () => {
   return (

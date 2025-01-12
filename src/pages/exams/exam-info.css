@@ -1,0 +1,127 @@
+.exam-info-container {
+    width: 100%;
+    /* position: relative; */
+    height: 1005;
+    padding: 0 24px;
+    padding-bottom: 100px;
+}
+
+.exam-info-container a {
+    font-weight: 500 !important;
+}
+
+.exam-info-breadcrumb-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 1000;
+    height: auto;
+    background-color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* bottom shadow */
+    box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+}
+
+.edit-exam-link {
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0b4dc1;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #0b4dc1;
+    transition: all .3s ease;
+}
+
+.edit-exam-link:hover {
+    background-color: #0b4dc1;
+    color: white;
+}
+
+.exam-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.exam-info-item-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.time-limit {
+    font-weight: 500;
+    background-color: #dfe6eb;
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: #333;
+}
+
+.exam-info-question-item {
+    /* border: 1px solid #dfe6eb; */
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.exam-info-question-item:nth-child(odd) {
+    background-color: rgb(224, 235, 241)
+}
+
+.exam-info-question-item:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #a0bacb;
+}
+
+.e-i-question-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.e-i-answer-section {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.e-i-answer-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.e-i-a-title {
+    font-weight: 500;
+    color: #0b4dc1;
+    /* background-color: white; */
+    width: 25px;
+    /* border: 1px solid #6296f1; */
+    border-radius: 4px;
+    margin-right: 5px;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.e-i-a-title.correct {
+    background-color: white;
+    /* border: 1px solid #08ae5b; */
+    color: green;
+    box-shadow: 0 0 2px 1px #08ae5b;
+}
+
+.answer-content {}

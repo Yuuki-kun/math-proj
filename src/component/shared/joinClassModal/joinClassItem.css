@@ -1,0 +1,62 @@
+.join-class-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: 1px solid rgb(195, 209, 220);
+    transition: border-bottom-color 0.2s ease;
+    transition: all 0.1s ease-in-out;
+}
+
+.join-class-item.cant-active {
+    color: grey !important;
+    background-color: rgb(235, 235, 235);
+
+}
+
+.join-class-item:hover .join-rs-class-name {
+    color: rgb(38, 97, 193);
+}
+
+.join-class-item:hover {
+    border-bottom-color: rgb(38, 97, 193);
+}
+
+.join-rs-class-short-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.join-rs-class-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(53, 64, 82);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+}
+
+.join-rs-class-teacher {
+    font-size: 14px;
+    margin-left: 16px;
+    color: rgb(38, 97, 193);
+}
+
+.join-class-btn {
+    height: 100%;
+    font-size: 14px;
+    padding: 0px 5px;
+    border: none;
+    background-color: rgb(147, 198, 218);
+    margin-left: 16px;
+    border-radius: 4px;
+    color: black;
+    font-weight: 450;
+}

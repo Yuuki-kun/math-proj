@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/math-proj/static/css/main.7e0da99d.css",
-    "main.js": "/math-proj/static/js/main.d713eaae.js",
-    "static/js/254.28550856.chunk.js": "/math-proj/static/js/254.28550856.chunk.js",
-    "static/css/410.f8f42c68.chunk.css": "/math-proj/static/css/410.f8f42c68.chunk.css",
-    "static/js/410.6268ef48.chunk.js": "/math-proj/static/js/410.6268ef48.chunk.js",
-    "static/js/453.69c6447e.chunk.js": "/math-proj/static/js/453.69c6447e.chunk.js",
-    "static/js/808.18951b97.chunk.js": "/math-proj/static/js/808.18951b97.chunk.js",
+    "main.css": "/math-proj/static/css/main.34af7158.css",
+    "main.js": "/math-proj/static/js/main.eeb6657d.js",
+    "static/css/288.83da0d80.chunk.css": "/math-proj/static/css/288.83da0d80.chunk.css",
+    "static/js/288.39b8683c.chunk.js": "/math-proj/static/js/288.39b8683c.chunk.js",
+    "static/css/557.83da0d80.chunk.css": "/math-proj/static/css/557.83da0d80.chunk.css",
+    "static/js/557.21133bc2.chunk.js": "/math-proj/static/js/557.21133bc2.chunk.js",
+    "static/css/424.7a98aa1c.chunk.css": "/math-proj/static/css/424.7a98aa1c.chunk.css",
+    "static/js/424.ca4b7b28.chunk.js": "/math-proj/static/js/424.ca4b7b28.chunk.js",
+    "static/js/0.4feba25b.chunk.js": "/math-proj/static/js/0.4feba25b.chunk.js",
+    "static/js/852.7a6bcd4e.chunk.js": "/math-proj/static/js/852.7a6bcd4e.chunk.js",
     "index.html": "/math-proj/index.html",
-    "main.7e0da99d.css.map": "/math-proj/static/css/main.7e0da99d.css.map",
-    "main.d713eaae.js.map": "/math-proj/static/js/main.d713eaae.js.map",
-    "254.28550856.chunk.js.map": "/math-proj/static/js/254.28550856.chunk.js.map",
-    "410.f8f42c68.chunk.css.map": "/math-proj/static/css/410.f8f42c68.chunk.css.map",
-    "410.6268ef48.chunk.js.map": "/math-proj/static/js/410.6268ef48.chunk.js.map",
-    "453.69c6447e.chunk.js.map": "/math-proj/static/js/453.69c6447e.chunk.js.map",
-    "808.18951b97.chunk.js.map": "/math-proj/static/js/808.18951b97.chunk.js.map"
+    "main.34af7158.css.map": "/math-proj/static/css/main.34af7158.css.map",
+    "main.eeb6657d.js.map": "/math-proj/static/js/main.eeb6657d.js.map",
+    "288.83da0d80.chunk.css.map": "/math-proj/static/css/288.83da0d80.chunk.css.map",
+    "288.39b8683c.chunk.js.map": "/math-proj/static/js/288.39b8683c.chunk.js.map",
+    "557.83da0d80.chunk.css.map": "/math-proj/static/css/557.83da0d80.chunk.css.map",
+    "557.21133bc2.chunk.js.map": "/math-proj/static/js/557.21133bc2.chunk.js.map",
+    "424.7a98aa1c.chunk.css.map": "/math-proj/static/css/424.7a98aa1c.chunk.css.map",
+    "424.ca4b7b28.chunk.js.map": "/math-proj/static/js/424.ca4b7b28.chunk.js.map",
+    "0.4feba25b.chunk.js.map": "/math-proj/static/js/0.4feba25b.chunk.js.map",
+    "852.7a6bcd4e.chunk.js.map": "/math-proj/static/js/852.7a6bcd4e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e0da99d.css",
-    "static/js/main.d713eaae.js"
+    "static/css/main.34af7158.css",
+    "static/js/main.eeb6657d.js"
   ]
 }

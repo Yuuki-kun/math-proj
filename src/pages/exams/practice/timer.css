@@ -1,0 +1,37 @@
+.timer-container {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    /* background-color: #fff; */
+    background-color: #f8f9fa;
+    /* border-bottom: 1px solid #cecece; */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-exam-btn {
+    color: #0b5db5;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 525;
+    cursor: pointer;
+    margin-top: 16px;
+    width: 100%;
+    border: 1px solid #0b5db5;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+}
+
+.submit-exam-btn:hover {
+    background-color: #0b5db5;
+    color: #fff;
+}

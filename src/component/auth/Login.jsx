@@ -14,7 +14,8 @@ import {
 import "./auth.css";
 import useAuth from "../../hook/useAuth";
 import { LoginService } from "../api/loginService";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { GoArrowUpRight } from "react-icons/go";
 const formItemLayout = {
   labelCol: {
     xs: {
@@ -63,12 +64,11 @@ const Login = () => {
         roles: response.roles,
         accessToken: response.accessToken,
         userId: response.userId,
+        memberId: response.memberId,
       });
 
-      if (response.roles.includes("ROLE_ADMIN")) {
-        navigate("/admin-dashboard");
-      } else if (response.roles.includes("ROLE_USER")) {
-        navigate("/homes");
+      if (response.roles.includes("ADMIN") || response.roles.includes("USER")) {
+        navigate("/home");
       } else {
         navigate("/login");
       }
@@ -132,6 +132,24 @@ const Login = () => {
             // autoComplete="new-password"
           />
         </Form.Item>
+
+        <Link
+          style={{
+            color: "blue",
+            fontSize: "15px",
+            textAlign: "left",
+            width: "100%",
+            display: "block",
+            marginBottom: "10px",
+            fontWeight: "450",
+            fontStyle: "italic",
+            textDecoration: "underline",
+          }}
+          to={"/authentication/register"}
+        >
+          Đăng ký
+          <GoArrowUpRight />
+        </Link>
 
         <Form.Item>
           <Button
