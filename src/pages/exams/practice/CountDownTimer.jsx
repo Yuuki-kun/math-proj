@@ -11,7 +11,7 @@ const CountdownTimer = ({ timeLimit, onSubmitExam }) => {
 
     const interval = setInterval(() => {
       if (timeLeftRef.current === 0) {
-        onSubmitExam();
+        // onSubmitExam();
         clearInterval(interval);
       } else {
         setTimeLeft((prevTime) => {
