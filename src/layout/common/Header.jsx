@@ -163,7 +163,7 @@ const Header = ({ isSidebarOpen, setSidebarOpen }) => {
   let stompClient;
   useEffect(() => {
     const startSocket = () => {
-      let ws = new SockJS("http://localhost:8080/mathmot-api/ws");
+      let ws = new SockJS("https://mathmotbe.onrender.com/mathmot-ap/ws");
       stompClient = Stomp.over(ws);
       //with bearer token
       stompClient.connect(

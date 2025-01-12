@@ -64,9 +64,11 @@ const CreatePostModal = ({
       const rs = await ClassPostApi.createPost(axiosPrivate, formData);
       console.log(rs);
       setLoading(false);
+      setOpen(false);
     } catch (err) {
       console.error(err);
       setLoading(false);
+      setOpen(false);
     }
   };
 
