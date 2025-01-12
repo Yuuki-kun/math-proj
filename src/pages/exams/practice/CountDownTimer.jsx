@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./timer.css";
 import { LuAlarmClock } from "react-icons/lu";
 const CountdownTimer = ({ timeLimit, onSubmitExam }) => {
-  const [timeLeft, setTimeLeft] = useState(timeLimit * 60 || 0); // 30 phút = 30 * 60 giây
+  const [timeLeft, setTimeLeft] = useState(timeLimit * 60 || 1800); // 30 phút = 30 * 60 giây
   const timeLeftRef = useRef(timeLeft); // Tạo ref để lưu giá trị
 
   useEffect(() => {
